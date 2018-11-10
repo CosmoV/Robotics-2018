@@ -10,7 +10,7 @@
 # laser_sensor.start_continuous(0)
 #
 # rgb_sensor = tcs34725.TCS34725(i2c)
-# us_sensor = us016.Ultrasonic(pyb.Pin.board.X3, pyb.Pin.board.X4, 3, 3)
+# us_sensor = us016.US016(pyb.Pin.board.X3, pyb.Pin.board.X4, 3, 3)
 #
 # rgb_sensor.active(True)
 # rgb_sensor.gain(60)

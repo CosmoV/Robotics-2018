@@ -1,9 +1,10 @@
 import pyb
 
+
 # Pin configuration.
 # WARNING: Do not use PA4-X5 or PA5-X6 as the echo pin without a 1k resistor.
 
-class Ultrasonic:
+class US016:
     def __init__(self, rangePin, outPin, inputVoltage, maxRange):
         self.rangePin = rangePin
         if maxRange <= 1:
@@ -18,4 +19,4 @@ class Ultrasonic:
 
     def distance(self):
         # https://uge-one.com/analog-output-ultrasonic-sensor-us-016.html72
-        return (pyb.ADC(self.outPin).read() * self.k / self.inputVoltage)
+        return pyb.ADC(self.outPin).read() * self.k / self.inputVoltage
